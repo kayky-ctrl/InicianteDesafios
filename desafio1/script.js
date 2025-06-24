@@ -1,7 +1,8 @@
 const inputNumero = document.getElementById('numero');
 const divTabuada = document.getElementById('tabuada');
 
-inputNumero.addEventListener('input', () => {
+inputNumero.addEventListener('input', (event) => {
+    event.preventDefault();
     const numero = parseInt(inputNumero.value);
     divTabuada.innerHTML = '';
 
@@ -11,4 +12,8 @@ inputNumero.addEventListener('input', () => {
         linha.textContent = `${numero} x ${i} = ${resultado}`;
         divTabuada.appendChild(linha);
     }
+    if (isNaN(numero)) {
+        divTabuada.innerHTML = '';
+    }
+    
 });
