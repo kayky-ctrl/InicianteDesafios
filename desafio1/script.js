@@ -2,7 +2,6 @@ const inputNumero = document.getElementById('numero');
 const divTabuada = document.getElementById('tabuada');
 
 inputNumero.addEventListener('input', (event) => {
-    event.preventDefault();
     const numero = parseInt(inputNumero.value);
     divTabuada.innerHTML = '';
 
